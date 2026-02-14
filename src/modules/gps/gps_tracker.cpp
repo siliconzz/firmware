@@ -11,6 +11,7 @@
 #include "core/mykeyboard.h"
 #include "core/sd_functions.h"
 #include "current_year.h"
+#include "gps_time_sync.h"
 
 #define MAX_WAIT 5000
 
@@ -83,6 +84,7 @@ void GPSTracker::loop() {
             if (gps.location.isUpdated()) {
                 padprintln("GPS location updated");
                 set_position();
+                // sync_esp32_time_from_gps(gps);  //uncomment for clock sync with gps
                 add_coord();
             } else {
                 padprintln("GPS location not updated");
