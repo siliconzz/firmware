@@ -15,6 +15,7 @@ public:
 
 private:
     void configMenu(void);
+    void syncTimeFromGpsMenu();
 };
 
 #endif
