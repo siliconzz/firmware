@@ -107,7 +107,7 @@ void GpsMenu::syncTimeFromGpsMenu() {
     PPM.disableOTG();
 #endif
 
-    if (!gotValidTime) { displayError("No valid time in 60s", true); }
+    if (!gotValidTime) { displayError("No GPS time in 60s", true); }
 
     if (rxPinReleased) {
         if (bruceConfigPins.CC1101_bus.checkConflict(bruceConfigPins.gps_bus.rx) ||

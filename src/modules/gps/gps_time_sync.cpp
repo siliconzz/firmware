@@ -71,15 +71,14 @@ bool sync_esp32_time_from_gps(TinyGPSPlus &gps, bool force) {
 
     already_synced_this_boot = true;
 
-    padprintf(
-        2,
-        "\nGPS time synced → raw GPS set, local adjusted (tmz=%.2f, dst=%s, tz offset=%+lds, leap correction "
+    /*padprintf(
+        "\n  GPS time synced!\n  (tmz=%.2f, dst=%s, tz offset=%+lds, leap correction "
         "+%lds)\n",
         bruceConfig.tmz,
         bruceConfig.dst ? "on" : "off",
         tz_offset_seconds,
         GPS_LEAP_OFFSET
-    );
+    );*/
 
     return true;
 }
