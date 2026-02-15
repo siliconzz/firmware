@@ -15,7 +15,7 @@
 static bool already_synced_this_boot = false;
 
 // GPS time is 18 seconds ahead of UTC (2026 value)
-const time_t GPS_LEAP_OFFSET = 18;
+const time_t GPS_LEAP_OFFSET = 35;
 
 bool sync_esp32_time_from_gps(TinyGPSPlus &gps, bool force) {
     if (!force && already_synced_this_boot) {
